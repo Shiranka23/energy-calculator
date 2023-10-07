@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Astro Energies
+    </title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Roof Top Energy Calculation
+            </h2>
+        </div>
+        <div>
+            <div>
+                <form action="">
+                    <div>
+                        <div>
+                            <div>
+                                <h3>Personal Information</h3>
+                            </div>
+                            <div>
+                                <label for="first-name-input">Customer First Name</label>
+                                <input type="text" id="first-name-input" name="first-name-input" />
+                            </div>
+                            <div>
+                                <label for="lastname">Customer Last Name</label>
+                                <input type="text" id="last-name-input" name="last-name-input" />
+                            </div>
+                            <div>
+                                <label for="address-input">Customer Address</label>
+                                <input type="text" id="address-input" name="address-input" />
+                            </div>
+                            <div>
+                                <label for="phone-input">Customer Phone Number</label>
+                                <input type="tel" id="phone-input" pattern="[0-9]{10}" name="phone-input" />
+                            </div>
+                            <div>
+                                <label for="email-input">Customer Email ID</label>
+                                <input type="email" id="email-input" name="email-input" />
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Site Information</h3>
+                            </div>
+                            <div>
+                                <label for="roof-type-select">Roof Type</label>
+                                <select name="roof-type-select" id="roof-type-select">
+                                    <option value="tile">Tile</option>
+                                    <option value="slate-tile">Slate Tile</option>
+                                    <option value="concrete">Concrete</option>
+                                    <option value="corrugated">Corrugated</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="yearly-consumption">Yearly kWh Consumption</label>
+                                <input type="text" id="yearly-consumption-input" name="yearly-consumption-input" />
+                            </div>
+                            <div>
+                                <label for="heat-source-select">Heat Source</label>
+                                <select name="heat-source-select" id="heat-source-select">
+                                    <option value="gas">Gas</option>
+                                    <option value="electric">Electric</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="heating-area-input">Heating Area(in sq. meters)</label>
+                                <input type="text" id="heating-area-input" name="heating-area-input" />
+                            </div>
+                            <div>
+                                <label for="own-car-checkbox">Do you own a Electric Car?</label>
+                                <select name="own-car-checkbox" id="own-car-checkbox">
+                                    <option value="no">No</option>
+                                    <option value="yes">Yes</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="car-consumption-input">How Many km per year</label>
+                                <input type="car-consumption-input" id="car-consumption-input" name="carEnergyConsumption" />
+                            </div>
+                            <div>
+                                <label for="house-direction-select">Your Roof Direction?</label>
+                                <select name="house-direction-select" id="house-direction-select">
+                                    <option value="south">South</option>
+                                    <option value="southeast">South East</option>
+                                    <option value="southwest">South Weat</option>
+                                    <option value="eastwest">East West</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Battery</h3>
+                            </div>
+                            <div>
+                                <label for="battery-size">What size battery do you want?(kWh)</label>
+                                <select name="battery-size" id="battery-size">
+                                    <option value="0">0</option>
+                                    <option value="5">5</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <h3>Roof Information</h3>
+                            </div>
+                            <div>
+                                <label for="roof-area">Roof Area in Sq. M</label>
+                                <input type="text" name="roof-area" id="roof-area">
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" id="submitButton" >Calculate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>
