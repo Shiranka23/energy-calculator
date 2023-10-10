@@ -228,7 +228,9 @@ submitButton.addEventListener("click",calculate=(event)=>{
     // var value=document.createElement('p');
     // value.innerHTML=userData;
     // sysSize.append(value);
-
+    console.log(document.location);
+    urlOrigin=document.location.origin;
+    window.open(urlOrigin+'/result.html');
     return {SystemCostWithBattery,SystemCostWithoutBattery,RequiresPVSize,panelQty,roofArea,RCD,inverter}
 });
 
