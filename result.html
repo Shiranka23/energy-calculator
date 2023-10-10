@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Financial Analysis</title>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta http-equiv="refresh" content="5" >
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="table">
+            <div class="table-header">
+                <div class="header__item"><p id="name" class="filter__link" >Financial Analysis</></div>
+                <div class="header__item"><p id="wins" class="filter__link filter__link--number">Values</></div>
+            </div>
+            <div class="table-content">	
+                <div class="table-row">		
+                    <div class="table-data">Recommended System size kWp</div>
+                    <div class="data" id="sys-size"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Production Degradation</div>
+                    <div class="data" id="prod-degrade">0.30%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Consumption Increase per year</div>
+                    <div class="data" id="consumption-increase">5%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Import Tariff</div>
+                    <div class="data" id="import-tariff">3.1</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Export Tariff</div>
+                    <div class="data" id="export-tariff">0.9</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Tariff Increase per year</div>
+                    <div class="data" id="tariff-increase">3%</div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">System Cost Without Battery</div>
+                    <div class="data" id="sys-cost-wo-battery"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">System Cost With Battery</div>
+                    <div class="data" id="sys-cost-w-battery"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Number of Panels</div>
+                    <div class="data" id="panels-count"></div>
+                </div>
+                <div class="table-row">
+                    <div class="table-data">Square meters</div>
+                    <div class="data" id="panels-area"></div>
+                </div>
+            </div>	
+        </div>
+    </div>
+    <script type="text/javascript">
+        
+    var sysSize=document.getElementById('sys-size');
+    var sysWOBattery=document.getElementById('sys-cost-wo-battery');
+    var sysWbattery=document.getElementById('sys-cost-w-battery');
+    var panelCount=document.getElementById('panels-count');
+    var panelArea=document.getElementById('panels-area');
+     var SY=document.getElementById('sys-size');
+    const userData1 = JSON.parse(localStorage.getItem('sysSize'));
+    const userData2 = "DDK "+JSON.parse(localStorage.getItem('sysWOBattery'));
+    const userData3 = "DDK "+JSON.parse(localStorage.getItem('sysWbattery'));
+    const userData4 = JSON.parse(localStorage.getItem('panelCount'));
+    const userData5 = JSON.parse(localStorage.getItem('panelArea'));
+    const userData6 = JSON.parse(localStorage.getItem('roofArea'));
+    const array=[sysSize,sysWOBattery,sysWbattery,panelCount,panelArea];
+    const data=[userData1,userData2,userData3,userData4,userData5,userData6];
+    for (let i=0;i<array.length;i++){
+        var value=document.createElement('p');
+
+        value.innerHTML =data[i];
+        array[i].appendChild(value);
+    }
+    localStorage.clear();
+    </script>
+</body>
+
+</html>
